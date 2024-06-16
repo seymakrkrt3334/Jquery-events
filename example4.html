@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <div id="yazi">
+        <!-- prepend -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At adipisci error consequuntur optio alias architecto, 
+        inventore unde quae enim. Possimus in sint totam numquam reprehenderit exercitationem quidem odio, perferendis alias 
+        doloribus minima et delectus ipsam reiciendis itaque ullam ducimus. 
+        Minus perspiciatis expedita exercitationem atque fuga facere officia nihil quibusdam debitis?</p>
+        <!-- append -->
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        $("#yazi").prepend("<h1>Burası Başlık Olacak<h1>");
+        $("#yazi").append("<i>Burası Paragrafın Sonu<i>");
+        $("#yazi").before("<img src='resim.jpg'>");
+        $("#yazi").after("<img src='resim.jpg'>");
+    });
+</script>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .baslik, .içerik{
+            padding:5px;
+            text-align:center;
+            background:#B1E0FF;
+            border:1px solid #83C0F8;
+
+        }
+
+        .içerik{
+            padding:30px;
+            display:none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="baslik">Menü1</div>
+    <div class="içerik">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati tenetur, voluptatem officia
+         provident quidem, quasi corrupti eaque illo omnis repellat accusantium unde incidunt vitae deleniti excepturi tempore harum mollitia in maxime repudiandae.
+         Ut molestias non, totam, culpa aut est dolor cum impedit cupiditate sed officiis ratione vero, nihil repellendus esse.</div>
+
+         <div class="baslik">Menü2</div>
+         <div class="içerik">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus id sint, asperiores expedita inventore 
+            molestias, aut, cupiditate blanditiis deleniti et sunt nisi tempore rerum. Reprehenderit, aliquam, quidem sint exercitationem voluptates mollitia
+             harum explicabo sequi libero nobis obcaecati enim excepturi nesciunt sapiente? Officia ratione quasi optio sint dignissimos illo animi fugit.</div>
+
+
+
+<div class="baslik">Menü3</div>
+<div class="içerik">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum possimus praesentium dignissimos? 
+    Incidunt ratione, culpa natus inventore a quia eius cupiditate nam ab reiciendis fugiat sit itaque tempora minus praesentium, exercitationem impedit, 
+    asperiores est. Placeat nam culpa pariatur enim facilis rem voluptas, exercitationem voluptatem rerum accusamus tempore minima iste inventore.</div>
+
+</body>
+<script>
+$(document).ready(function(){
+    $(".baslik:eq(0)").click(function(){
+        $(".içerik:eq(0)").slideToggle(5000,function(){
+
+        $(".içerik:eq(1)").slideUp(5000);
+        $(".içerik:eq(2)").slideUp(5000);
+        });
+        
+    });
+    
+
+    $(".baslik:eq(1)").click(function(){
+        $(".içerik:eq(1)").slideToggle("slow");
+        $(".içerik:eq(2)").slideUp("slow");
+        $(".içerik:eq(0)").slideUp("slow");
+    });
+
+    $(".baslik:eq(2)").click(function(){
+        $(".içerik:eq(2)").slideToggle("slow");
+        $(".içerik:eq(1)").slideUp("slow");
+        $(".içerik:eq(0)").slideUp("slow");
+    });
+})
+</script>
+</html>

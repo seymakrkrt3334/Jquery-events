@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide-show</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        .container{
+            width:300px;
+            height:250px;
+            background:#FF0004;
+            position:relative;
+        }
+
+        .box1{
+            position:absolute;
+            width:90%;
+            height:160px;
+            background:#F8F8B7;
+            bottom:20px;
+            left:50%;
+            transform:translateX(-50%);
+            padding:5px;
+
+        }
+        .button{
+            padding:8px 15px;
+            background: #5f98FD;
+            cursor:pointer;
+            display:inline-block;
+            margin:5px;
+            box-shadow: 3px 1px 13px 0px rgba(0,0,0,0.7);
+        }
+        p{
+            cursor:pointer;
+            display:inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="button">Gizle</div>
+        <div class="button">Göster</div>
+        <div class="button">Gizle/Göster</div>
+        <div class="box1">
+            <p>X</p><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> 
+            In atque modi natus possimus officia,<br>
+             corrupti at. Architecto, consectetur repellat. Porro.</div>
+    </div>
+    <script>
+        $(document).ready(function(){
+
+          $(".button:eq(0)").click(function(){
+            $(".box1").hide(500);
+          });
+
+          $(".button:eq(1)").click(function(){
+            $(".box1").show("slow");
+          });
+
+          $(".button:eq(2)").click(function(){
+            $(".box1").toggle(500);
+          });
+
+          $("p").click(function(){
+            $(".box1").hide(500);
+          })
+
+         
+        });
+    </script>
+</body>
+</html>

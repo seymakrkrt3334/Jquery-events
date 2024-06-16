@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Attributes</title>
+    <style>
+       
+        .bilgi{
+            padding:50px;
+            margin:50px;
+            width:200px;
+            background:grey;
+        }
+        .renkdegistir{
+            background:darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="bilgi" id="içerik"><br>
+        Ad soyad: <input type="text" name="adsoyad" id="adsoyad" value=""><br>
+        Okul no: <input type="text" id="okulno" name="okulno" value="okul no">
+        <input type="button" value="basiniz" id="basiniz" name="basiniz">
+        <input type="button" value="siliniz" id="basiniz" name="basiniz">
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+            /*
+            $(":button").click(function(){
+                $("input:eq(1)").attr({
+                    type:"text",
+                    id:"okulno",
+                    value:"okul no"
+                });
+            });*/
+
+            $(":button:eq(0)").click(function(){
+                $("#içerik").addClass("renkdegistir");
+
+            });
+
+            $(":button:eq(1)").click(function(){
+                $("#içerik").removeClass("renkdegistir");
+            })
+
+
+        });
+    </script>
+
+</body>
+</html>

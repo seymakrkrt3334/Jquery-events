@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        .kutu{
+            top:100px;
+            left:100px;
+            width:100px;
+            height:100px;
+            background-color: brown;
+            position:absolute;
+
+        }
+    </style>
+</head>
+<body>
+    <button id="oku">Değerleri oku</button>
+    <button id="degistir">Değerleri değiştir</button>
+    <div class="kutu"></div>
+    <p id="deger"></p>
+</body> 
+
+<script>
+    $(function(){
+        $("#oku").click(function(){
+            var ust=$(".kutu").offset().top;
+            var sol=$(".kutu").offset().left;
+            var  genişlik=$(".kutu").width();
+            var yükseklik=$(".kutu").height();
+            $("p").html("üstten:"+ust+"soldan:"+sol+"genişlik:"+genişlik+"yükseklik:"+yükseklik);
+        });
+
+
+
+        $("#degistir").click(function(){
+            $(".kutu").offset({top:300,left:500});
+        });
+        $("#degistir").click(function(){
+            $(".kutu").offset({top:300,left:500});
+            $(".kutu").width(300);
+            $(".kutu").height(400);
+        });
+    });
+
+
+
+</script>
+</html>

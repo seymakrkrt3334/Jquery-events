@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jge3</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div>
+        <p></p>
+        <p class="yazi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem error mollitia, at numquam hic sequi voluptatibus ullam voluptate sint quis delectus praesentium culpa nostrum, sapiente minus ipsam laudantium! Fuga, dignissimos expedita eum aut fugit id dolorem quam velit ipsum unde perspiciatis ad assumenda mollitia! Eos aut ipsa dolorum laborum natus.</p>
+        <input type="text" name="" id="sayi1">
+        <input type="text" name="" id="sayi2">
+        <input type="button" value="basınız">
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(":button").click(function(){
+                // var sayi1=$(":input:eq(0)").val();
+                // var sayi2=$(":input:eq(1)").val();
+                // sayi1=parseInt(sayi1);// we can converted to integer number!!
+                // sayi2=parseInt(sayi2);
+                // var toplam=sayi1+sayi2;
+                // $("p").html(toplam);
+
+                var yazi=$(".yazi").html();
+                alert(yazi);
+
+
+            });
+        });
+
+
+
+
+    </script>
+</body>
+</html>

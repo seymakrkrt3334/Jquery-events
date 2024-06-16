@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet"  href="fontawesome/css/all.min.css">
+    <script src="jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+</head>
+<body>
+    <nav>
+        
+        <div><i class="fas fa-bars"></i></div>
+    
+    <ul>
+        <li><a href="#">Anasayfa</a></li>
+        <li><a href="#">Ürünler<i class="fas fa-sort-down"></i></a>
+
+        <ul>
+            <li><a href="#">Altmenu1</a></li>
+            <li><a href="#">Altmenu2</a></li>
+            <li><a href="#">Altmenu3</a></li>
+        </ul>
+        </li>
+        <li><a href="#">Hizmetlerimiz</a></li>
+        <li><a href="#">Hakkımızda<i class="fas fa-sort-down"></i></a>
+        <ul>
+            <li><a href="#">Misyonumuz</a></li>
+            <li><a href="#">Vizyonumuz</a></li>
+        </ul>
+        </li>
+        <li><a href="#">iletişim</a></li>
+    </ul>
+
+    </nav>
+<script>
+
+$(document).ready(function(){
+    $("nav div").click(function(){
+        $("ul").slideToggle();
+        $("ul ul").css("display","none");
+    });
+
+    $("ul li").click(function(){
+        $("ul ul").slideUp();
+        $(this).find("ul").slideToggle();
+    });
+
+    $(window).resize(function(){
+        if($(window).width()>700){
+            $("ul").removeAttr("style");
+        }
+        
+    });
+});
+
+</script>
+
+</body>
+</html>

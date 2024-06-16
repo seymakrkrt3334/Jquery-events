@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>JQuery Olaylar(events)</title>
+<script src="jquery-3.4.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<style>
+		.kutu{
+			width: 250px;
+			height: 150px;
+			background: #FFA9AA;
+			float: left;
+			margin: 5px;
+		}
+	</style>
+    
+</head>
+<body>
+	<div class="kutu"><h4>click</h4>Fare ile tıklama</div>
+	<div class="kutu"><h4>dblclick</h4>Fare ile çift tıklama</div>
+	<div class="kutu"><h4>mouseenter</h4>Fare ile üzerine gelinmesi</div>
+	<div class="kutu"><h4>mouseleave</h4>Fare ile üzerinden çıkılması</div>
+	<div class="kutu"><h4>mousedown</h4>Fare tuşuna basılması</div>
+	<div class="kutu"><h4>mouseup</h4>Farenin basılı tuşunun bırakılması</div>
+	<div class="kutu"><h4>hover</h4>mouseenter ve mouseleave özelliklerinin birleşimi</div>
+	<div class="kutu"><h4>focus</h4>Form elemanına tıklayarak odaklanma <input type="text" id="isim"></div>
+	<div class="kutu"><h4>blur</h4>Form elemanının terk edilmesi<input type="text" id="soyad"></div>
+	<div class="kutu"><h4>resize</h4>Pencere boyutunun değişmesi </div>
+
+<script>
+$(document).ready(function(){
+	$(".kutu:eq(0)").on({
+		click:function(){
+			$(this).css("background","blue");
+			},
+		mouseenter:function(){
+			$(this).css("background","red");
+			},
+		mouseleave:function(){
+			$(this).css("background","yellow");
+		}
+	});
+	
+		$(".kutu:eq(1)").dblclick(function(){
+		$(this).css("background","red");
+	});
+		$(".kutu:eq(2)").mouseenter(function(){
+		$(this).css("color","green");
+	});
+	
+		$(".kutu:eq(3)").mouseleave(function(){
+		$(this).fadeOut(2000);
+	});
+		$(".kutu:eq(4)").mousedown(function(){
+		$(this).css("background","yellow");
+	});
+			$(".kutu:eq(5)").mouseup(function(){
+		$(this).css("background","#fff");
+	});
+		$(".kutu:eq(6)").hover(function(){
+		$(this).css("background","#fff");
+	},
+	function(){
+			$(this).css("background","#ABC").css("color","yellow");
+			
+		});
+	
+		$(".kutu:eq(7) input").focus(function(){
+		$(this).css("background","red");
+	});
+	
+		$(".kutu:eq(8) input").blur(function(){
+		$(this).css("background","blue");
+	});
+		$(window).resize(function(){
+		 $(".kutu:eq(9)").append($(window).width()+"-");
+	});
+	
+	
+});
+	
+    </script>
+</body>
+</html>

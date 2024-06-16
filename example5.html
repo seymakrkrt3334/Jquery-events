@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <label for="uzmanlık">Uzmanlık</label>
+        <select name="" id="uzmanlık">
+            <option value="">Seçiniz</option>
+            <option value="grafik">Grafikler</option>
+            <option value="web">Web Programlama</option>
+            <option value="masaüstü">Masaüstü Programlama</option>
+        </select>
+        <br>
+        <div class="seçenek">
+            <form action="" class="bilgi" method="get"></form>
+        </div>
+    </div>
+
+    <script>
+$(document).ready(function(){
+	$("select").change(function(){
+		var meslek = $(".container option:selected").val();
+		$(".bilgi").empty();
+		if(meslek == "grafik"){
+			$(".bilgi").append('<input type = "checkbox" name= "meslek" value="PS">Photoshop ')
+			$(".bilgi").append('<input type = "checkbox" name= "meslek" value="AI">Illustrator ')
+			$(".bilgi").append('<input type = "checkbox" name= "meslek" value="CD">Corel Draw ')
+		}
+		if(meslek == "web"){
+			$(".bilgi").append('<input type = "checkbox" name= "meslek" value="php">PHP ')
+			$(".bilgi").append('<input type = "checkbox" name= "meslek" value="asp">ASP ')
+			$(".bilgi").append('<input type = "checkbox" name= "meslek" value="java">JAVA ')
+		}
+		if(meslek == "masaüstü"){
+			$(".bilgi").append('<input type = "checkbox" name= "meslek" value="C">C ')
+			$(".bilgi").append('<input type = "checkbox" name= "meslek" value="Cplus">C++ ')
+			$(".bilgi").append('<input type = "checkbox" name= "meslek" value="Csharp">C# ')
+		}
+		$(".bilgi").append('<input type = "submit" value ="Gönder">')
+	});
+});
+    </script>
+</body>
+</html>

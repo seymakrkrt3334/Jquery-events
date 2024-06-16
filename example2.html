@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .container{
+            background-color:chocolate;
+            position: relative;
+            width:300px;
+            height:250px;
+
+        }
+
+        .button{
+            padding: 8px 15px;
+            background-color:darksalmon;
+            cursor:pointer;
+            display:inline-block;
+            margin:5px;
+            box-shadow: 3px 1px 13px 0px rgba(0,0,0,0.7);
+
+        }
+
+        .box1{
+            position:absolute;
+            width:90%;
+            height:160px;
+            background: #F8F8B7;
+            bottom:20px;
+            left:50%;
+            transform:translateX(-50%);
+            padding:5px;
+        }
+        p{
+            cursor:pointer;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="button">hide</div>
+    <div class="button">show</div>
+    <div class="button">hide-show</div>
+    <div class="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit temporibus 
+        incidunt maxime cumque hic, consectetur provident? Omnis quam aut modi.</div>
+</div>
+    
+<script>
+    $(document).ready(function(){
+        $(".button:eq(0)").click(function(){
+            $(".box1").fadeOut(500);
+        });
+
+        $(".button:eq(1)").click(function(){
+            $(".box1").fadeIn("fast");
+        });
+
+        $(".button:eq(2)").click(function(){
+            $(".box1").fadeToggle("fast");
+        });
+       $(".button:eq(3)").click(function(){
+        $(".box1").fadeTo(5000,0.8);
+       });
+    });
+    
+</script>
+</body>
+</html>
